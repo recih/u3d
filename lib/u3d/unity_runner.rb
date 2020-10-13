@@ -115,7 +115,7 @@ module U3d
     end
 
     def pipe(file)
-      File.open(file, 'r') do |f|
+      File.open(file, 'r:utf-8') do |f|
         f.extend File::Tail
         f.interval = 0.1
         f.max_interval = 0.4
